@@ -1,6 +1,13 @@
 **hastebin**
+
 Simple hastebin client, no runtime needed, binaries provided 
 
-work in progress
+    Usage:
+        echo some content | hastebin [options]
 
-MIT license
+    Options:
+        -o      Open the resulting URL
+        -s      Do not print anything
+        -u      alternative url to http://hastebin.com/"""
+
+MIT license - see License
