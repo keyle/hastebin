@@ -16,12 +16,12 @@ const Usage = "\nhastebin " & $Version & """ - Simple hastebin client
     Options:
         -o      Open the resulting URL
         -s      Do not print anything
-        -u      alternative url to http://hastebin.com/"""
+        -u      alternative url to http://hastebin.com"""
 
 var
     open:bool
     silent:bool
-    hasteurl:string = "http://hastebin/"
+    hasteurl:string = "http://hastebin.com"
 
 let x = stdin.readAll.strip
 if x.len < 2:
@@ -38,7 +38,7 @@ for opt in getopt():
         of "u":
             hasteurl = opt.val
             if(hasteurl.len < 4):
-                echo "\nInvalid url, expected: -u http://someurl.com/"
+                echo "\nInvalid url, expected: -u http://somehasteserver.com"
                 echo Usage
                 quit()
         else:
@@ -46,10 +46,10 @@ for opt in getopt():
             echo Usage
             quit()
 
-let res = parseJson postContent(url = "http://hastebin.com/documents", body = x)
+let res = parseJson postContent(url = hasteurl & "/documents", body = x)
 assert (res.kind == JObject)
 
-let url = "http://hastebin.com/" & res["key"].str
+let url = hasteurl & "/" & res["key"].str
 
 if silent == false:
     echo url
