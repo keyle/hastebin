@@ -11,3 +11,9 @@ Simple hastebin client, no runtime needed, binaries provided
         -u      alternative url to http://hastebin.com/
 
 MIT license - see License
+
+**compiling**
+
+Using the latest /devel branch of Nim, use the nim compiler
+
+    nim c hastebin.nim
