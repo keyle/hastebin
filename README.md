@@ -1,6 +1,6 @@
 **hastebin**
 
-    Simple hastebin client, no runtime needed, binaries provided 
+Simple hastebin client, no runtime needed, binaries provided 
 
     Usage:
         echo some content | hastebin [options]
