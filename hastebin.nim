@@ -59,6 +59,7 @@ if open == true:
         let openstr = "start " & url
         discard execShellCmd(openstr)
     else:
-        let openstr = "open " & url # TODO check that it works on both mac/linux
+        let openstr = "open " & url # TODO make it work on mac / linux
+        # TODO On linux, it's `xdg-open`
         discard execShellCmd(openstr)
     
