@@ -56,6 +56,7 @@ if silent == false:
 
 if open == true:
     # TODO validate that we're getting a url back from server and not opening... anything else...(!)
+    # osproc.execProcess("xdg-open", [url])
     if defined(windows):
         let openstr = "start " & url
         discard execShellCmd(openstr)
