@@ -20,5 +20,5 @@ Using the latest /devel branch of Nim, use the nim compiler
 
 **downloads**
 
-- [Windows x86-64 binary](https://github.com/keyle/hastebin/raw/master/bin/windows-x86_64/hastebin.exe)
+- [Windows x86-64 binary](https://github.com/keyle/hastebin/raw/master/bin/windows-x86_64/hastebin.exe) (right-click the file / properties / unblock)
 - [Linux x86-64 binary](https://github.com/keyle/hastebin/raw/master/bin/linux-x86_64/hastebin)
