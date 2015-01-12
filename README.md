@@ -17,3 +17,8 @@ MIT license - see License
 Using the latest /devel branch of Nim, use the nim compiler
 
     nim c hastebin.nim
+
+**downloads**
+
+- Linux x86-64 binary [https://github.com/keyle/hastebin/raw/master/bin/linux-x86_64/hastebin]
+- Windows x86-64 binary [https://github.com/keyle/hastebin/raw/master/bin/windows-x86_64/hastebin.exe]
