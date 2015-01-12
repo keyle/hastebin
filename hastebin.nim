@@ -55,6 +55,7 @@ if silent == false:
     echo url
 
 if open == true:
+    # TODO validate that we're getting a url back from server and not opening... anything else...(!)
     if defined(windows):
         let openstr = "start " & url
         discard execShellCmd(openstr)
