@@ -4,7 +4,7 @@
 ## (c) 2015 Nicolas Noben
 ##     MIT License
 ## 
-import httpclient, strutils, json, parseopt2, os
+import httpclient, strutils, json, parseopt2, os, osproc
 
 const Version = 1.0
 
@@ -55,13 +55,12 @@ if silent == false:
     echo url
 
 if open == true:
-    # TODO validate that we're getting a url back from server and not opening... anything else...(!)
-    # osproc.execProcess("xdg-open", [url])
+    # TODO test on mac / linux
     if defined(windows):
         let openstr = "start " & url
         discard execShellCmd(openstr)
+    if defined(linux):
+        discard osproc.execProcess("xdg-open", [url])  
     else:
-        let openstr = "open " & url # TODO make it work on mac / linux
-        # TODO On linux, it's `xdg-open`
+        let openstr = "open " & url
         discard execShellCmd(openstr)
-    
